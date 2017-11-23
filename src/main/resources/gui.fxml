@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="322.0" prefWidth="404.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jrod.awsinitializer.GuiController">
+   <children>
+      <TabPane prefHeight="330.0" prefWidth="404.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Submit">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="176.0" layoutY="102.0" text="Mfa Code" />
+                        <TextField fx:id="mfaCode" layoutX="128.0" layoutY="77.0" prefHeight="25.0" prefWidth="148.0" text="mfaCode" />
+                        <Button fx:id="submitButton" layoutX="175.0" layoutY="129.0" mnemonicParsing="false" onMouseClicked="#submit" text="Submit" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Settings">
+               <content>
+                  <AnchorPane prefHeight="292.0" prefWidth="404.0">
+                     <children>
+                        <Label layoutX="54.0" layoutY="39.0" text="Path to AWS cli executable (ends in aws.cmd on windows)" />
+                        <TextField fx:id="awsCliPath" layoutX="58.0" layoutY="14.0" prefHeight="25.0" prefWidth="300.0" text="awsCliPath" />
+                        <Label layoutX="176.0" layoutY="89.0" text="Aws Region" />
+                        <TextField fx:id="awsRegion" layoutX="57.0" layoutY="64.0" prefHeight="25.0" prefWidth="300.0" text="awsRegion" />
+                        <TextField fx:id="mfaArn" layoutX="58.0" layoutY="114.0" prefHeight="25.0" prefWidth="300.0" text="mfaArn" />
+                        <Label layoutX="181.0" layoutY="142.0" text="Mfa Arn" />
+                        <Button fx:id="updateButton" layoutX="176.0" layoutY="269.0" mnemonicParsing="false" onMouseClicked="#writeSettingsProperties" text="Update" />
+                        <TextField fx:id="accessKeyId" layoutX="53.0" layoutY="164.0" prefHeight="25.0" prefWidth="300.0" />
+                        <TextField fx:id="secretAccessKey" layoutX="52.0" layoutY="214.0" prefHeight="25.0" prefWidth="300.0" />
+                        <Label layoutX="166.0" layoutY="189.0" text="Access Key Id" />
+                        <Label layoutX="156.0" layoutY="239.0" text="Secret Access Key" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
